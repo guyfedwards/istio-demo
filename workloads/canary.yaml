@@ -22,7 +22,7 @@ spec:
     - public-gateway.istio-system.svc.cluster.local
     # Istio virtual service host names (optional)
     hosts:
-    - podinfo.example.com
+    - podinfo.jif.lol
   canaryAnalysis:
     # max number of failed metric checks before rollback
     threshold: 10
