@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: quay.io/stefanprodan/podinfo:1.0.1
+        image: quay.io/stefanprodan/podinfo:1.1.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9898
