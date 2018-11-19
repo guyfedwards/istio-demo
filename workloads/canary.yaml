@@ -25,13 +25,13 @@ spec:
     - podinfo.jif.lol
   canaryAnalysis:
     # max number of failed metric checks before rollback
-    threshold: 10
+    threshold: 100
     # max traffic percentage routed to canary
     # percentage (0-100)
-    maxWeight: 50
+    maxWeight: 80
     # canary increment step
     # percentage (0-100)
-    stepWeight: 10
+    stepWeight: 2
     metrics:
     - name: istio_requests_total
       # minimum req success rate (non 5xx responses)
