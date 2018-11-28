@@ -31,7 +31,7 @@ spec:
     maxWeight: 80
     # canary increment step
     # percentage (0-100)
-    stepWeight: 20
+    stepWeight: 2
     metrics:
     - name: istio_requests_total
       # minimum req success rate (non 5xx responses)
