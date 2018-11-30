@@ -1,19 +1,19 @@
 apiVersion: flagger.app/v1alpha1
 kind: Canary
 metadata:
-  name: demo
-  namespace: demo
+  name: podinfo
+  namespace: podinfo
 spec:
   # deployment reference
   targetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: demo
+    name: podinfo
   # HPA reference (optional)
   autoscalerRef:
     apiVersion: autoscaling/v2beta1
     kind: HorizontalPodAutoscaler
-    name: demo
+    name: podinfo
   service:
     # container port
     port: 9898
@@ -22,7 +22,7 @@ spec:
     - public-gateway.istio-system.svc.cluster.local
     # Istio virtual service host names (optional)
     hosts:
-    - demo.jif.lol
+    - kubecon.jif.lol
   canaryAnalysis:
     # max number of failed metric checks before rollback
     threshold: 10

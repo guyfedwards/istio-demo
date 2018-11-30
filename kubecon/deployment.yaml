@@ -2,10 +2,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo
-  namespace: demo
+  name: podinfo
+  namespace: podinfo
   labels:
-    app: demo
+    app: podinfo
 spec:
   strategy:
     rollingUpdate:
@@ -13,13 +13,13 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: demo
+      app: podinfo
   template:
     metadata:
       annotations:
         prometheus.io/scrape: "true"
       labels:
-        app: demo
+        app: podinfo
     spec:
       containers:
       - name: podinfod
