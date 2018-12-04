@@ -1,19 +1,19 @@
 apiVersion: flagger.app/v1alpha1
 kind: Canary
 metadata:
-  name: podinfo
+  name: podinfo2
   namespace: kubecon
 spec:
   # deployment reference
   targetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: podinfo
+    name: podinfo2
   # HPA reference (optional)
   autoscalerRef:
     apiVersion: autoscaling/v2beta1
     kind: HorizontalPodAutoscaler
-    name: podinfo
+    name: podinfo2
   service:
     # container port
     port: 9898
