@@ -25,7 +25,7 @@ spec:
     - kubecon.jif.lol
   canaryAnalysis:
     # max number of failed metric checks before rollback
-    threshold: 3
+    threshold: 2
     # max traffic percentage routed to canary
     # percentage (0-100)
     maxWeight: 50
