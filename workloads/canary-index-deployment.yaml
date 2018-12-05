@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: canary-index
+  namespace: test
+  labels:
+    app: canary-index
+spec:
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: canary-index
+  template:
+    metadata:
+      labels:
+        app: canary-index
+    spec:
+      containers:
+      - name: canary-index
+        image: guyfedwards/canary-index:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
