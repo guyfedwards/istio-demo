@@ -1,0 +1,1 @@
+{"jobID":"4dc9541b-cd3e-299c-30b0-305ab74e1306","spec":{"type":"policy","cause":{"Message":"","User":"Demo Demo \u003cdemo@weave.works\u003e"},"spec":{"test:deployment/podinfo":{"add":null,"remove":{"tag.podinfod":"glob:\u003e1.3.x"}}}},"result":null}
